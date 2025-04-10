@@ -1,4 +1,7 @@
 package net.Atos.Atos_Extras;
+import net.Atos.Atos_Extras.block.AddedBlocks;
+import net.Atos.Atos_Extras.item.AddedItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -15,6 +18,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
 @Mod(AtosExtras.MOD_ID)
 public class AtosExtras
 {
@@ -23,6 +27,8 @@ public class AtosExtras
     public AtosExtras(IEventBus modEventBus, ModContainer modContainer)
     {
         NeoForge.EVENT_BUS.register(this);
+        AddedItems.register(modEventBus);
+        AddedBlocks.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -32,7 +38,13 @@ public class AtosExtras
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
+           event.accept(AddedItems.TESTITEM);
+           event.accept(AddedBlocks.TEST_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(AddedItems.ATOSINGOT);
+        }
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
