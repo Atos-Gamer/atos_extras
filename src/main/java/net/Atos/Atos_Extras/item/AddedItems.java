@@ -12,6 +12,8 @@ public class AddedItems {
             ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> ATOSINGOT = ITEMS.register("atos_ingot",
             ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> SLIMEINGOT = ITEMS.register("slime_ingot",
+            ()-> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
