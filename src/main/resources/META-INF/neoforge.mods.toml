@@ -1,0 +1,10 @@
+modLoader="javafml"
+loaderVersion="[1.21,)"
+license="MIT"
+
+[[mods]]
+modId="atos_extras"
+version="0.0.1"
+displayName="Atos Extras"
+description=""
+authors="Atos"
