@@ -26,11 +26,12 @@ public class AtosExtras
     private static final Logger LOGGER = LogUtils.getLogger();
     public AtosExtras(IEventBus modEventBus, ModContainer modContainer)
     {
-        NeoForge.EVENT_BUS.register(this);
-        AddedItems.register(modEventBus);
-        AddedBlocks.register(modEventBus);
-        modEventBus.addListener(this::addCreative);
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        NeoForge.EVENT_BUS.register(this);                        // For things like ServerStartingEvent
+        AddedItems.register(modEventBus);                         // Your custom items
+        AddedBlocks.register(modEventBus);                        // Your custom blocks
+        modEventBus.addListener(this::addCreative);               // Add stuff to creative tabs
+        modEventBus.addListener(this::commonSetup);               // <-- Register your common setup logic
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);  // Register the config file
     }
     private void commonSetup(final FMLCommonSetupEvent event)
     {
