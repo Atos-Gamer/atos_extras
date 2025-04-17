@@ -45,6 +45,9 @@ public class AtosExtras
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(AddedItems.ATOSINGOT);
             event.accept(AddedItems.SLIMEINGOT);
+            event.accept(AddedItems.ATOSORE);
+            event.accept(AddedItems.ATOSCHUNK);
+            event.accept(AddedItems.ATOSDUST);
         }
     }
     @SubscribeEvent

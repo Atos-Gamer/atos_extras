@@ -14,7 +14,12 @@ public class AddedItems {
             ()-> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SLIMEINGOT = ITEMS.register("slime_ingot",
             ()-> new Item(new Item.Properties()));
-
+    public static final DeferredItem<Item> ATOSCHUNK = ITEMS.register("atos_chunk",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ATOSDUST = ITEMS.register("atos_dust",
+            ()-> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ATOSORE = ITEMS.register("atos_ore",
+            ()-> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
