@@ -14,13 +14,13 @@
   "processingTime": 200,
   "results": [
     {
-      "item": "atos_extras:atos_chunk",
-      "count": 1
+      "item": "atos_extras:atos_dust",
+      "count": 2
     },
     {
       "item": "atos_extras:atos_dust",
       "count": 1,
-      "chance": 0.1
+      "chance": 0.5
     }
   ]
 }

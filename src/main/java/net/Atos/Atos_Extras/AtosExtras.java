@@ -47,7 +47,6 @@ public class AtosExtras
             event.accept(AddedItems.ATOSINGOT);
             event.accept(AddedItems.SLIMEINGOT);
             event.accept(AddedItems.ATOSORE);
-            event.accept(AddedItems.ATOSCHUNK);
             event.accept(AddedItems.ATOSDUST);
         }
     }
