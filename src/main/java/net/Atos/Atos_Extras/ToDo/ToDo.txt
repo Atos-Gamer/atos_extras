@@ -1,8 +1,4 @@
 Add textures
-    Atosium dust
-    Atosium Chunk
-
-
 
 
 
@@ -11,4 +7,4 @@ Add Recipes
     4 slime ingots into slime block
     9 atosium ingots into atosium block
     atosium dust smelts into atosium ingot
-    atosim chunk crushed into atosim dust
+    atosim ore crushed into atosim dust
