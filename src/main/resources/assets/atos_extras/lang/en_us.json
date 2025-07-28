@@ -3,7 +3,8 @@
   "item.atos_extras.atos_ingot": "Atosium Ingot",
   "block.atos_extras.test_block": "Test Block",
   "item.atos_extras.slime_ingot": "Slime Ingot",
-  "item.atos_extras.atos_chunk": "Atosium Chunk",
+  "block.atos_extras.atos_ore_ore": "Atosium Ore Node",
   "item.atos_extras.atos_dust": "Atosuim Dust",
-  "item.atos_extras.atos_ore": "Atosium Ore"
+  "item.atos_extras.atos_ore": "Atosium Ore",
+  "item.atos_extras.fireball_blade": "Fireball Blade"
 }

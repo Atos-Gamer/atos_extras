@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "atos_extras:slime_ingot"
+    }
+  },
+  "result": {
+    "id": "minecraft:slime_block",
+    "count": 2
+  }
+}

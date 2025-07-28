@@ -2,9 +2,11 @@ package net.Atos.Atos_Extras.item;
 
 import net.Atos.Atos_Extras.AtosExtras;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
 
 public class AddedItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AtosExtras.MOD_ID);
@@ -19,7 +21,7 @@ public class AddedItems {
     public static final DeferredItem<Item> ATOSORE = ITEMS.register("atos_ore",
             ()-> new Item(new Item.Properties()));
 
-    public static void register(IEventBus eventBus) {
+        public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
 }

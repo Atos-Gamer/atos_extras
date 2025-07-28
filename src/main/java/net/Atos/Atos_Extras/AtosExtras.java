@@ -1,5 +1,7 @@
 package net.Atos.Atos_Extras;
+
 import net.Atos.Atos_Extras.block.AddedBlocks;
+import net.Atos.Atos_Extras.commands.DevCommands; // Import DevCommands
 import net.Atos.Atos_Extras.item.AddedItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -24,24 +26,31 @@ public class AtosExtras
 {
     public static final String MOD_ID = "atos_extras";
     private static final Logger LOGGER = LogUtils.getLogger();
+
     public AtosExtras(IEventBus modEventBus, ModContainer modContainer)
     {
         NeoForge.EVENT_BUS.register(this);                        // For things like ServerStartingEvent
+
+        // Register DevCommands so your dev-only commands work
+        NeoForge.EVENT_BUS.register(DevCommands.class);
+
         AddedItems.register(modEventBus);                         // Your custom items
         AddedBlocks.register(modEventBus);                        // Your custom blocks
         modEventBus.addListener(this::addCreative);               // Add stuff to creative tabs
         modEventBus.addListener(this::commonSetup);               // <-- Register your common setup logic
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);  // Register the config file
     }
+
     private void commonSetup(final FMLCommonSetupEvent event)
     {
 
     }
+
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
-           event.accept(AddedItems.TESTITEM);
-           event.accept(AddedBlocks.TEST_BLOCK);
+            event.accept(AddedItems.TESTITEM);
+            event.accept(AddedBlocks.TEST_BLOCK);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(AddedItems.ATOSINGOT);
@@ -50,18 +59,20 @@ public class AtosExtras
             event.accept(AddedItems.ATOSDUST);
         }
     }
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
 
     }
+
     @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-       
+
         }
     }
 }

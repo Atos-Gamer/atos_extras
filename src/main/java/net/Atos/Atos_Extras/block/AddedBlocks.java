@@ -21,6 +21,10 @@ public class AddedBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .jumpFactor(15).strength(4f).requiresCorrectToolForDrops().sound(SoundType.SLIME_BLOCK)));
 
+    public static final DeferredBlock<Block> ATOS_ORE_ORE = registerBlock("atos_ore_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
