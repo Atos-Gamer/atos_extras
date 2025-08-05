@@ -1,0 +1,1 @@
+{"neoforge:conditions":[{"type":"neoforge:mod_loaded","modid":"mekanism"}],"type":"mekanism:nucleosynthesizing","chemical_input":{"amount":1,"chemical":"mekanism:antimatter"},"duration":72000,"item_input":{"count":1,"item":"atos_extras:atos_block"},"output":{"count":15,"id":"atos_extras:atos_dust_refined"},"per_tick_usage":false}

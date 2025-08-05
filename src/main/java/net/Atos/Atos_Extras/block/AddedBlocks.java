@@ -25,18 +25,21 @@ public class AddedBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
+    public static final DeferredBlock<Block> ATOS_BLOCK = registerBlock("atos_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4f).sound(SoundType.SAND)));
+
+       private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block){
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-    private static <T extends Block> void registerBlockItem (String name, DeferredBlock<T> block){
+
+    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block){
         AddedItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
     }
-
-
 }

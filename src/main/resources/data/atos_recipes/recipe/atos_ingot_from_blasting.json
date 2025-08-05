@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "atos_extras:atos_dust"
+  },
+  "result": {
+    "id": "atos_extras:atos_ingot"
+  },
+  "experience": 0,
+  "cookingtime": 100
+}

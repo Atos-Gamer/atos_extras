@@ -4,6 +4,4 @@ Add textures
 
 
 Add Recipes
-    9 atosium ingots into atosium block
-    atosium dust + gold alloy into atosium ingot
    slime ball + iron ingot alloy into slime ingot

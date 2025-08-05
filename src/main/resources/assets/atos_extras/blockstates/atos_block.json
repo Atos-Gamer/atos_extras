@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "atos_extras:block/atos_block"
+    }
+  }
+}

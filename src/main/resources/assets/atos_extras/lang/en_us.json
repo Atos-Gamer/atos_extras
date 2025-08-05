@@ -6,5 +6,6 @@
   "block.atos_extras.atos_ore_ore": "Atosium Ore Node",
   "item.atos_extras.atos_dust": "Atosuim Dust",
   "item.atos_extras.atos_ore": "Atosium Ore",
-  "item.atos_extras.fireball_blade": "Fireball Blade"
+  "block.atos_extras.atos_block": "Atosium Dust Cube",
+  "item.atos_extras.atos_dust_refined": "Refined Atosium Dust"
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+   "all": "atos_extras:block/atos_block"
+  }
+}

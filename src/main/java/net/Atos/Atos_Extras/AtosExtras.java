@@ -29,17 +29,17 @@ public class AtosExtras
 
     public AtosExtras(IEventBus modEventBus, ModContainer modContainer)
     {
-        NeoForge.EVENT_BUS.register(this);                        // For things like ServerStartingEvent
-
-        // Register DevCommands so your dev-only commands work
+        NeoForge.EVENT_BUS.register(this);
         NeoForge.EVENT_BUS.register(DevCommands.class);
 
-        AddedItems.register(modEventBus);                         // Your custom items
-        AddedBlocks.register(modEventBus);                        // Your custom blocks
-        modEventBus.addListener(this::addCreative);               // Add stuff to creative tabs
-        modEventBus.addListener(this::commonSetup);               // <-- Register your common setup logic
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);  // Register the config file
+        AddedItems.register(modEventBus);
+        AddedBlocks.register(modEventBus);
+
+        modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::commonSetup);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
+
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
@@ -52,11 +52,18 @@ public class AtosExtras
             event.accept(AddedItems.TESTITEM);
             event.accept(AddedBlocks.TEST_BLOCK);
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(AddedBlocks.ATOS_BLOCK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(AddedBlocks.ATOS_ORE_ORE);
+        }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(AddedItems.ATOSINGOT);
             event.accept(AddedItems.SLIMEINGOT);
             event.accept(AddedItems.ATOSORE);
             event.accept(AddedItems.ATOSDUST);
+            event.accept(AddedItems.REFINEDATOSDUST);
         }
     }
 
