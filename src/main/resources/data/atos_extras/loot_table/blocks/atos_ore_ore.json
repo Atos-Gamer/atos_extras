@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "atos_extras:blocks/atos_ore_ore",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "atos_extras:atos_ore"
+        }
+      ]
+    }
+  ]
+}
